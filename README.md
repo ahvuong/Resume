@@ -1,2 +1,1 @@
-# Resume
-Anh Vuong's Resume
+# Anh Vuong's Resume
