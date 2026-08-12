@@ -5,45 +5,79 @@
     <title>Anh Vuong's Resume</title>
     <style>
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             margin: 0; 
-            padding: 30px 20px; 
-            background: linear-gradient(135deg, #1e1e24 0%, #111115 100%); 
-            color: #f5f5f7;
+            padding: 40px 20px; 
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%); 
+            color: #2c3e50;
             min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container { 
             max-width: 950px; 
-            margin: 0 auto; 
-            background: rgba(255, 255, 255, 0.03); 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px; 
+            border-radius: 24px; 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); 
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
         }
 
         h1 { 
-            font-size: 2.2rem; 
-            color: #ffffff; 
-            margin-bottom: 5px; 
-            font-weight: 600; 
-            letter-spacing: -0.5px; 
+            font-size: 2.8rem; 
+            margin: 0 0 10px 0; 
+            font-weight: 800; 
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, #f43f5e, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         p { 
-            color: #a0a0ab; 
-            font-size: 1.1rem; 
+            color: #5a6e7f; 
+            font-size: 1.2rem; 
             margin-top: 0; 
-            margin-bottom: 25px; 
+            margin-bottom: 30px; 
+            font-weight: 400;
         }
 
-        iframe { 
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+
+        .pdf-frame { 
             width: 100%; 
             height: 80vh; 
             border: none; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            background: #ffffff;
         }
     </style>
 </head>
@@ -52,8 +86,7 @@
         <h1>Anh Vuong's Resume</h1>
         <p>You can view or print my resume directly below.</p>
         
-        <!-- This embeds your resume.pdf onto the page -->
-        <iframe src="Files\Anh_Vuong_Resume_ENG.pdf"></iframe>
+        <iframe src="Files\Anh_Vuong_Resume_ENG.pdf" class="pdf-frame"></iframe>
     </div>
 
 </body>
